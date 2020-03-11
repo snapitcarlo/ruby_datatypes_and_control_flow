@@ -24,10 +24,10 @@ a = gets.chomp.to_i
 
 if a == 3
   puts "a is 3" # this executes when the number given is a 3
-elsif a == 4    # this executes when the number given is a 4
+elsif a == 4 # this executes when the number given is a 4
   puts "a is 4"
 else
-  puts "a is neither 3, nor 4" # this executes when the number given 
+  puts "a is neither 3, nor 4" # this executes when the number given
 end                            # is neither 3 or 4
 =end
 # ***********************************
@@ -35,23 +35,24 @@ end                            # is neither 3 or 4
 # ***********************************
 =begin
 # Example 1
-if x == 3
-  puts "x is 3"
-end
+x = 3
+# if x == 3
+#   puts "x is 3"
+# end
 
-# Example 2
-if x == 3
-  puts "x is 3"
-elsif x == 4
-  puts "x is 4"
-end
+# # Example 2
+# if x == 3
+#   puts "x is 3"
+# elsif x == 4
+#   puts "x is 4"
+# end
 
-# Example 3
-if x == 3
-  puts "x is 3"
-else
-  puts "x is NOT 3"
-end
+# # Example 3
+# if x == 3
+#   puts "x is 3"
+# else
+#   puts "x is NOT 3"
+# end
 
 # Example 4: must use "then" keyword when using 1-line syntax
 if x == 3 then puts "x is 3" end
@@ -73,14 +74,14 @@ has a lower value than anything to the right of the symbol.
 > - The "greater than" symbol. Anything to the left of the symbol 
 has a higher value than anything to the right of the symbol.
 =end
-# =begin
-# puts 4 < 5
-# puts 4 > 5
-# puts 4 >= 5
-# puts 4 <=5      # this is called your less than or equal to symbole
-# puts 5 == 5     # this is called your equality operator
-# puts 5 == "5"   # this is called your equality operator
-# =end
+=begin
+puts 4 < 5
+puts 4 > 5
+puts 4 >= 5
+puts 4 <= 5      # this is called your less than or equal to symbole
+puts 5 == 5     # this is called your equality operator
+puts 5 == "5"   # this is called your equality operator
+=end
 
 =begin
 # The not equal to operator: !=
@@ -119,8 +120,38 @@ puts (4 == 5) || (5 == 5)
 puts (4 == 5) || (5 == 6)
 =end
 
+# =begin
+# ! - the "not" operator. When you add this in front of a boolean expresion it will
+# change that boolean value to its opposite
+
+# puts !(4 == 4)
+
+# =end
+# ***********************************
+
+# ***********************************
+# TERNARY OPERATOR
 =begin
-! - the "not" operator. When you add this in front of a boolean expresion it will
-change that boolean value to its opposite
+password = "hello"
+puts "enter a password"
+input = gets.chomp
+
+puts input.upcase == password.upcase ? "that is correct" : "not for you!!!"
 =end
 # ***********************************
+
+# ***********************************
+# CASE STATEMENT
+# =begin
+puts "Enter a number"
+
+a = gets.chomp.to_i
+case a
+when 5
+  puts "a is 5"
+when 6
+  puts "a is 6"
+else
+  puts "a is neither 5, nor 6"
+end
+# =end
