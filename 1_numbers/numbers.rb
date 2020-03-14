@@ -31,6 +31,7 @@
  - subtraction  
  * multiplication  
  / division  
+ % moduluous
 =end
 
 # ************* integers **************
@@ -58,10 +59,10 @@ puts 3.2.class  # -> print the class of 3.2
 
 # ********* float imprecision *********
 =begin
-#The Float class in Ruby is described as “imprecise”
-#in the official Ruby documentation.
-puts ((0.2 + 0.1) == 0.3)
-# we would thing this is true but it
+# The Float class in Ruby is described as “imprecise”
+# in the official Ruby documentation.
+puts ((0.2 + 0.1) == 0.3) # false
+# we would think this is true but it
 # actually evaluates to false
 =end
 # ********* float imprecision ***********
@@ -98,12 +99,12 @@ puts BigDecimal("0.2") + BigDecimal("0.1") == 0.3
 #----------------------------------------
 
 # ********** Zero Division **************
-=begin
+# =begin
 # Just like regular math we are not able to divide by
 # Zero
-puts 5 / 0
+# puts 5 / 0
 # If we run this code we get a ZeroDivisionError
-=end
+# =end
 # ********** Zero Division **************
 
 #----------------------------------------
